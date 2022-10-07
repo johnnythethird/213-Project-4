@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="765.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CustomizeController">
+   <children>
+      <ImageView fx:id="chosenPizza" fitHeight="203.0" fitWidth="314.0" layoutX="39.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="39.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Size">
+         <font>
+            <Font name="Agency FB" size="24.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="pizzaSize" layoutX="133.0" layoutY="300.0" onAction="#switchSize" prefHeight="25.0" prefWidth="181.0" promptText="Select Size" />
+      <ListView fx:id="additionalToppings" layoutX="39.0" layoutY="399.0" prefHeight="274.0" prefWidth="229.0" />
+      <ListView fx:id="selectedToppings" layoutX="442.0" layoutY="399.0" prefHeight="274.0" prefWidth="229.0" />
+      <Button fx:id="addTopping" layoutX="310.0" layoutY="446.0" mnemonicParsing="false" onAction="#addTopping" prefHeight="37.0" prefWidth="87.0" text="Add &gt;&gt;&gt;">
+         <font>
+            <Font name="Agency FB" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="removeTopping" layoutX="310.0" layoutY="536.0" mnemonicParsing="false" onAction="#removeTopping" prefHeight="37.0" prefWidth="87.0" text="&lt;&lt;&lt; Remove">
+         <font>
+            <Font name="Agency FB" size="16.0" />
+         </font>
+      </Button>
+      <Text layoutX="63.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional Toppings">
+         <font>
+            <Font name="Agency FB" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="471.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Toppings">
+         <font>
+            <Font name="Agency FB" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="575.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+         <font>
+            <Font name="Agency FB" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="531.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="addOrder" layoutX="531.0" layoutY="120.0" mnemonicParsing="false" onAction="#addOrder" text="Add to order">
+         <font>
+            <Font name="Agency FB" size="24.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="totalPizzaPrice" disable="true" layoutX="544.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="115.0" wrapText="true">
+         <font>
+            <Font name="Agency FB" size="26.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
